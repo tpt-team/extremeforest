@@ -1,0 +1,25 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  host: localhost
+  password: password
+  # For details on connection pooling, see rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: 5
+
+development:
+  <<: *default
+  database: extremeforest_development
+
+
+test:
+  <<: *default
+  database: extremeforest_test
+
+
+production:
+  <<: *default
+  database: extremeforest_production
+  username: extremeforest
+  password: <%= ENV['EXTREMEFOREST_DATABASE_PASSWORD'] %>
