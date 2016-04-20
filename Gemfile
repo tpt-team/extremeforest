@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'bootstrap-growl-rails'
 gem 'activeadmin', github: 'activeadmin'
 gem 'devise'
 gem 'slim-rails'
