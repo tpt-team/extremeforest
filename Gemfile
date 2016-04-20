@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'activeadmin', github: 'activeadmin'
+gem 'devise'
 gem 'slim-rails'
 gem 'decent_exposure'
 gem 'rails', '4.2.5.1'
