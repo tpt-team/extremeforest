@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   resources :products
+  get 'categories/(:id)', to: 'products#index', as: :categories
 
   root 'products#index'
 
