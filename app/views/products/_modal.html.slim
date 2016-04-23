@@ -8,7 +8,7 @@
       .modal-body
         .row
           .col-sm-4
-            h1 = "place for image"
+            = image_tag(product.photo.url(:medium))
           .col-sm-4.col-sm-offset-4
             h4 Description:
             = product.description
