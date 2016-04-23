@@ -235,6 +235,7 @@ DEPENDENCIES
   devise
   jbuilder (~> 2.0)
   jquery-rails
+  kaminari
   letter_opener
   pg (~> 0.15)
   rails (= 4.2.5.1)

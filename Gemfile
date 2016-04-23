@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'kaminari'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-growl-rails'
 gem 'activeadmin', github: 'activeadmin'
