@@ -8,7 +8,7 @@ ActiveAdmin.register Product do
     f.input :description
     f.input :price
     f.input :category_id, :as => :select, :collection => Category.all.map {|u| [u.title.to_s, u.id]}
-    f.input :photo # , :as => :file, :hint => f.template.image_tag(f.object.photo.url(download: true))
+    f.input :photo, :as => :file, :hint => f.template.image_tag(f.object.photo.url(:medium))
   end
   f.actions
 end
