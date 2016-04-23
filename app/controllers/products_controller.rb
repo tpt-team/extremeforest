@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   expose(:product)
-  expose(:products) { |default| default.page(params[:page]).per(8) }
+  expose(:products) { |default| default.by_category(params[:id]).page(params[:page]).per(8) }
+  expose(:categories)
 
   def create
     product.save

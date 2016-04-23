@@ -1,0 +1,7 @@
+ul.nav.nav-pills.nav-stacked
+  li role="presentation" class=('active' unless params[:id])
+   = link_to 'All products', root_path
+  - categories.each do |category|
+    li role="presentation" class=('active' if params[:id].to_i == category.id )
+      = link_to category.title, categories_path(category)
+      

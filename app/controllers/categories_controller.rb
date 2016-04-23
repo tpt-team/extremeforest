@@ -1,7 +1,6 @@
 class CategoriesController < ApplicationController
   expose(:category)
-  expose(:categories)
-
+  
   def create
     category.save
   end
