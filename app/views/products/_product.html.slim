@@ -1,0 +1,7 @@
+.col-sm-3
+  .thumbnail
+    = link_to product.name, product, remote: true, class: 'product-link'
+    .caption
+      h3 = product.name
+      p  = product.description
+      p  = number_to_currency(product.price)
