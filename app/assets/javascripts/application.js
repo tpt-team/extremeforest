@@ -15,3 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).on('keyup', '#_search', function(){
+  $(this.form).trigger('submit.rails');
+})
