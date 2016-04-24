@@ -1,8 +1,8 @@
-- if products.empty?
+- if @products.empty?
   .alert.alert-info
     h3 Sorry no results found
-- products.each_slice(4) do |group|
+- @products.each_slice(4) do |group|
   .row
     = render partial: 'product', collection: group
-= paginate products
-= page_entries_info products
+= paginate @products
+= page_entries_info @products
