@@ -1,7 +1,11 @@
 class ProductsController < ApplicationController
   expose(:product)
-  expose(:products) { |default| default.scopedproduct(params) }
+  expose(:products) # { |default| default.scopedproduct(params) }
   expose(:categories)
+
+  def index
+    @products = products.scopedproduct(params)
+  end
 
   def create
     product.save
