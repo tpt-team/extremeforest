@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'simple_form'
 gem 'paperclip', '~> 4.1'
 gem 'kaminari'
 gem 'bootstrap-sass', '~> 3.3.6'
