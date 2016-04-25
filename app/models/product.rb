@@ -8,5 +8,6 @@ class Product < ActiveRecord::Base
   scope :by_category, -> (id) { joins(:category).where('categories.id = ?', id) if id }
   scope :psearch, -> (name) { where('name ILIKE :q OR description ILIKE :q', q: "%#{name}%") if name }
   scope :scopedproduct, -> (params) { psearch(params[:search]).by_category(params[:id]).page(params[:page]).per(8) }
-
+  scope :in_cart, -> (cart) { where(id: cart) }
+  
 end

@@ -6,4 +6,10 @@ class ApplicationController < ActionController::Base
   decent_configuration do
     strategy DecentExposure::StrongParametersStrategy
   end
+
+  def cart
+    session[:products] ||= []
+  end
+  helper_method :cart
+  
 end
