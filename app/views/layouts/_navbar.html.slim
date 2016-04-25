@@ -1,0 +1,13 @@
+nav.navbar.navbar-default
+  .container-fluid
+    .navbar-header
+      a.navbar-brand href="#"
+        img src="https://vk.com/images/favicon_vk.ico?3"
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav.navbar-right
+        li
+          = link_to root_path, class: "navbar-right" do
+            span.glyphicon.glyphicon-shopping-cart
+            ' &nbsp Кошик
+        li
+          = render 'layouts/dropdown_menu'

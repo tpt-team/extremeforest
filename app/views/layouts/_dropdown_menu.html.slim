@@ -1,0 +1,20 @@
+- if user_signed_in?
+  li.dropdown
+    a.dropdown-toggle data-toggle="dropdown" href="#"
+      = current_user.email
+      span.caret
+    ul.dropdown-menu
+      li.divider
+      li
+        = link_to destroy_user_session_path, method: :delete
+          span.glyphicon.glyphicon-log-out
+          ' &nbsp Вийти
+- else
+    li
+      = link_to new_user_registration_path do
+        span.glyphicon.glyphicon-user
+        ' &nbsp Зареєструватися
+    li
+      = link_to new_user_session_path do
+        span.glyphicon.glyphicon-log-in
+        ' &nbsp Увійти
