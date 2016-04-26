@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  email: MyString
+  phone: MyString
+  total: 9.99
+
+two:
+  email: MyString
+  phone: MyString
+  total: 9.99

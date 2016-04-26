@@ -1,0 +1,24 @@
+.modal-body
+  - if cart.empty?
+    .alert.alert-info
+      h3 Your cart is empty
+  - else
+    = simple_form_for order, url: order_path, method: :patch, remote: true do |f|
+      - products.each do |product|
+        = f.fields_for :products, OrderProduct.new do |form|
+          = form.hidden_field :product_id, value: product.id
+          .row.product
+            .col-sm-3
+              = image_tag(product.photo, size: '75')
+            .col-sm-3
+              = product.name
+            .col-sm-2.price
+              = product.price
+            .col-sm-2
+              = form.input :quantity, label: false, as: :integer
+            .col-sm-2
+              = link_to order_path(id: product), id: "delete_#{product.id}", remote: true, method: :delete do
+                | &times
+      = f.input :email
+      = f.input :phone
+      = f.button :button

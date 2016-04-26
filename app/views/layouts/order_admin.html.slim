@@ -1,16 +1,12 @@
 doctype html
 html
   head
-    meta content=("text/html; charset=UTF-8") http-equiv="Content-Type" /
-    title Extremeforest
+    title ExtremeForest
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body
+    .manage
+      => link_to 'Orders', order_admin_orders_path
     .container
-      header
-        = render 'layouts/header'
-      = render 'layouts/messages'
       = yield
-    #productModal
-    #cartModal
