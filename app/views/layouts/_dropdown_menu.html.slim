@@ -8,13 +8,13 @@
       li
         = link_to destroy_user_session_path, method: :delete
           span.glyphicon.glyphicon-log-out
-          ' &nbsp Вийти
+          ' &nbsp Выйти
 - else
     li
       = link_to new_user_registration_path do
         span.glyphicon.glyphicon-user
-        ' &nbsp Зареєструватися
+        ' &nbsp Регистрация
     li
       = link_to new_user_session_path do
         span.glyphicon.glyphicon-log-in
-        ' &nbsp Увійти
+        ' &nbsp Войти

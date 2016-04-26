@@ -18,4 +18,4 @@
               .col-sm-6
                 h5 = number_to_currency(product.price)
             .modal-footer
-              = link_to 'Додати до кошика', cart_order_path(id: product), remote: true, method: :patch, class: 'btn btn-success'
+              = link_to ' Добавить в корзину', cart_order_path(id: product), remote: true, method: :patch, class: 'order-btn'

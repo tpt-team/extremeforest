@@ -1,7 +1,7 @@
 .modal-body
   - if cart.empty?
     .alert.alert-info
-      h3 Your cart is empty
+      h3 Ваша корзина пустая
   - else
     = simple_form_for order, url: order_path, method: :patch, remote: true do |f|
       - products.each do |product|
@@ -19,6 +19,6 @@
             .col-sm-2
               = link_to order_path(id: product), id: "delete_#{product.id}", remote: true, method: :delete do
                 | &times
-      = f.input :email
-      = f.input :phone
-      = f.button :button
+      = f.input :email, label: false, placeholder: 'Email'
+      = f.input :phone, label: false, placeholder: 'Номер телефона'
+      = f.button :button, 'Сделать заказ'

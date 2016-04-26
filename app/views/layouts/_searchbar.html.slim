@@ -1,6 +1,6 @@
 = simple_form_for '', url: categories_path(params[:id]), remote: true, method: 'get' do |f|
   .row
     .col-sm-11
-      = f.input :search, label: false, input_html: { value: params[:search] }, placeholder: 'Пошук продуктів'
+      = f.input :search, label: false, input_html: { value: params[:search] }, placeholder: 'Поиск товаров'
     .col-sm-1
-      = f.button :button, :search, class: 'btn-primary'
+      = link_to 'Поиск',categories_path(params[:id]), remote: true, method: 'get', class: 'search-btn'

@@ -1,8 +1,8 @@
 .list-group
-  a.list-group-item href= root_path class=('active_category' unless params[:id])
+  a.list-group-item href= root_path class=('active-category' unless params[:id])
     | Все продукты
     span.badge = Product.count.to_s
   - categories.each do |category|
-    a.list-group-item href= categories_path(category) class=('active_category' if params[:id].to_i == category.id )
+    a.list-group-item href= categories_path(category) class=('active-category' if params[:id].to_i == category.id )
       = category.title
       span.badge = category.products.count.to_s

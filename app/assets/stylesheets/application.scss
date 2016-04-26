@@ -29,6 +29,46 @@
       text-align: left;
    }
 
-  .active_category {
-    background-color: #F8F8F8;
+  .active-category {
+    background-color: #cff09e;
+  }
+
+  .search-btn {
+    text-align: center;
+    padding: 6px;
+    margin-left: -20px;
+    border-radius: 5px;
+    display: block;
+    font-size: 15px;
+    color: #4d4b4b;
+    border: 1px solid #d6d6d6;
+    background: white;
+  }.search-btn:focus {
+    text-decoration: none;
+    color: #4d4b4b;
+  }.search-btn:active {
+    text-decoration: none;
+    color: #4d4b4b;
+    background: #cff09e;
+  }.search-btn:hover {
+    text-decoration: none;
+    color: #4d4b4b;
+    background: #cff09e;
+  }
+
+  .order-btn {
+    text-align: center;
+    padding: 3px;
+    display: block;
+    font-size: 15px;
+    color: #4d4b4b;
+    border: 1px solid #d6d6d6;
+    background: #cff09e;
+  }.order-btn:focus {
+    text-decoration: none;
+    color: #4d4b4b;
+  }.order-btn:hover{
+    text-decoration: none;
+    color: #4d4b4b;
+    background: #cff09e;
   }
