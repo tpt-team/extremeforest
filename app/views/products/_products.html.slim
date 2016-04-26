@@ -5,4 +5,5 @@
   .row
     = render partial: 'product', collection: group
 = paginate @products
-= page_entries_info @products
+- if @products.count > 0
+  = page_entries_info @products
