@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     patch ':id', action: :create, as: :cart
   end
   get 'categories/(:id)', to: 'products#index', as: :categories
+  get 'subcategories/(:subid)', to: 'products#index', as: :subcategories
 
   root 'products#index'
 

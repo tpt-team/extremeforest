@@ -2,6 +2,7 @@ class ProductsController < ApplicationController
   expose(:product)
   expose(:products) # { |default| default.scopedproduct(params) }
   expose(:categories)
+  expose(:subcategories)
 
   def index
     @products = products.scopedproduct(params)
