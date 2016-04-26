@@ -16,6 +16,12 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+$(document).on('ready page:load', function(){
+  $('.new').addClass( "alert alert-danger" )
+  $('.done').addClass( "alert alert-success" )
+  $('.process').addClass( "alert alert-warning" )
+})
+
 $(document).on('keyup', '#_search', function(){
   $(this.form).trigger('submit.rails');
 })
