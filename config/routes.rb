@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   devise_for :users
   resources :products, only: [:show]
+  resource :order, only: [:show, :destroy, :update] do
+    patch ':id', action: :create, as: :cart
+  end
   get 'categories/(:id)', to: 'products#index', as: :categories
 
   root 'products#index'
-
 end
