@@ -11,6 +11,6 @@ nav.navbar.navbar-default
             span.glyphicon.glyphicon-shopping-cart
             ' &nbsp Корзина
             - if cart.any?
-              = cart.size
+              span.badge = cart.size
         li
           = render 'layouts/dropdown_menu'

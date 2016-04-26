@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get 'categories/(:id)', to: 'products#index', as: :categories
 
   root 'products#index'
+
+  namespace :order_admin do
+    resources :orders
+  end
 end
