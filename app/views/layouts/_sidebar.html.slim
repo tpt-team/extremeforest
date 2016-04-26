@@ -1,7 +1,8 @@
-ul.nav.nav-pills.nav-stacked
-  li role="presentation" class=('active' unless params[:id])
-   = link_to 'All products', root_path
+.list-group
+  a.list-group-item href= root_path class=('active_category' unless params[:id])
+    | Все продукты
+    span.badge = Product.count.to_s
   - categories.each do |category|
-    li role="presentation" class=('active' if params[:id].to_i == category.id )
-      = link_to category.title, categories_path(category)
-      
+    a.list-group-item href= categories_path(category) class=('active_category' if params[:id].to_i == category.id )
+      = category.title
+      span.badge = category.products.count.to_s
