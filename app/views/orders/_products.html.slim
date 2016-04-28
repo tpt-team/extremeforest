@@ -20,6 +20,13 @@
               = link_to order_path(id: product), id: "delete_#{product.id}", remote: true, method: :delete do
                 | &times
       br
-      = f.input :email, label: false, placeholder: 'Email'
-      = f.input :phone, label: false, placeholder: 'Номер телефона'
+      .input-group
+        span.input-group-addon @
+        = f.input :email, label: false, placeholder: 'Email'
+      br
+      .input-group
+        span.input-group-addon ☎
+        = f.input :phone, label: false, placeholder: 'Номер телефона'
+      br
       = f.button :button, 'Сделать заказ'
+       /
