@@ -1,4 +1,5 @@
 = simple_form_for [:order_admin, order], remote: true do |f|
+  = f.input :username, disabled: true
   = f.input :email, disabled: true
   = f.input :phone, disabled: true
   = f.input :status, collection: ['Новый', 'Отправлен', 'В процессе'],
