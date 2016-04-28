@@ -21,6 +21,10 @@
                 | &times
       br
       .input-group
+        span.input-group-addon 😃
+        = f.input :username, label: false, placeholder: 'Имя'
+      br
+      .input-group
         span.input-group-addon @
         = f.input :email, label: false, placeholder: 'Email'
       br
