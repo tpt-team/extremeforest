@@ -1,4 +1,5 @@
 class ProductsController < ApplicationController
+  impressionist actions: [:show]
   expose(:product)
   expose(:products) # { |default| default.scopedproduct(params) }
   expose(:categories)
