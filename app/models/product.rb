@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-
+  is_impressionable
   belongs_to :category
   belongs_to :subcategory
 
