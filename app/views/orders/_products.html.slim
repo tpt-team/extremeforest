@@ -9,7 +9,7 @@
           = form.hidden_field :product_id, value: product.id
           .row.product
             .col-sm-3
-              = image_tag(product.photo, size: '75')
+              = image_tag(product.photo.url(:medium), size:'75')
             .col-sm-3
               = product.name
             .col-sm-2.price
@@ -19,6 +19,18 @@
             .col-sm-2
               = link_to order_path(id: product), id: "delete_#{product.id}", remote: true, method: :delete do
                 | &times
-      = f.input :email, label: false, placeholder: 'Email'
-      = f.input :phone, label: false, placeholder: 'Номер телефона'
+      br
+      .input-group
+        span.input-group-addon 😃
+        = f.input :username, label: false, placeholder: 'Имя'
+      br
+      .input-group
+        span.input-group-addon @
+        = f.input :email, label: false, placeholder: 'Email'
+      br
+      .input-group
+        span.input-group-addon ☎
+        = f.input :phone, label: false, placeholder: 'Номер телефона'
+      br
       = f.button :button, 'Сделать заказ'
+       /
