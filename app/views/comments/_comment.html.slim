@@ -1,0 +1,13 @@
+- if comment.user
+  .row
+    .col-sm-2
+      .thumbnail
+        img.img-responsive.user-photo src="/images/medium/missing.png"
+    .col-sm-10
+      .panel.panel-default
+        .panel-heading
+          strong = comment.user.username
+          span.text-muted = " оставлено #{time_ago_in_words(comment.created_at)} назад" 
+        .panel-body
+          p = comment.title
+      
