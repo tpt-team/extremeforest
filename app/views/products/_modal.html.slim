@@ -21,6 +21,7 @@
                 h5 = number_to_currency(product.price)
             .modal-footer
               = link_to ' Добавить в корзину', cart_order_path(id: product), remote: true, method: :patch, class: 'order-btn'
+              = link_to 'Подробней', product_path, class: 'about-btn'
           .col-sm-12
             = render 'comments/form'
             br

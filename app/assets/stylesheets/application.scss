@@ -117,7 +117,28 @@
   .order-btn:hover{
     text-decoration: none;
     color: #4d4b4b;
-    background: #cff09e;
+  }
+
+
+  .about-btn {
+    margin-top: 5px;
+    text-align: center;
+    padding: 3px;
+    display: block;
+    font-size: 15px;
+    color: #4d4b4b;
+    border: 1px solid #d6d6d6;
+    background: #f0e09e;
+  }
+
+  .about-btn:focus {
+    text-decoration: none;
+    color: #4d4b4b;
+  }
+
+  .about-btn:hover{
+    text-decoration: none;
+    color: #4d4b4b;
   }
 
   .subcategory {
