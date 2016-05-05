@@ -4,5 +4,5 @@ h2 Отправить инструкцию подтверждения
     .field
       = f.input :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email)
     .actions
-      = f.button :submit
+      = f.button :submit, 'Отправить инструкцию', class: "btn btn-primary"
     = render "devise/shared/links"
