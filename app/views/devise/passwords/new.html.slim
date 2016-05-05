@@ -3,6 +3,6 @@ h2 Забыли пароль?
   .col-sm-6.col-sm-offset-2
     .form-group
       = f.input :email, autofocus: true
-      = f.button :submit, class: "btn btn-primary"
+      = f.button :submit, 'Отправить инструкцию', class: "btn btn-primary"
     .form-group
       = render "devise/shared/links"

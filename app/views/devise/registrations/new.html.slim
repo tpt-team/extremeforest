@@ -6,6 +6,6 @@ h2 Регистрация
       = f.input :email
       = f.input :password, autocomplete: "off"
       = f.input :password_confirmation, autocomplete: "off"
-      = f.button :submit, class: "btn btn-primary"
+      = f.button :submit, 'Зарегистрироваться', class: "btn btn-primary"
     .form-group
       = render "devise/shared/links"
