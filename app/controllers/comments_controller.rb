@@ -1,4 +1,6 @@
 class CommentsController < ApplicationController
+  before_action :authenticate_user!
+
   expose(:product)
   expose(:comment)
 
@@ -6,7 +8,6 @@ class CommentsController < ApplicationController
     comment = Comment.new(comment_params)
     if comment.update(comment_params)
       comment.update_attributes(product_id: product.id, user_id: current_user.id)
-      redirect_to root_path
     else
       render :new
     end

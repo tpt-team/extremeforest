@@ -1,3 +1,3 @@
-= simple_form_for([product, product.comments.new]) do |f|
+= simple_form_for [product, product.comments.new] , remote: true do |f|
     = f.input :title, label: false
     = f.button :submit, 'Оставить отзыв'
