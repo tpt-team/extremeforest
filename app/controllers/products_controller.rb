@@ -14,6 +14,10 @@ class ProductsController < ApplicationController
     product.save
   end
 
+  def show
+    impressionist(product)
+  end
+
   def update
     create
   end
