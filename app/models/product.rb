@@ -1,6 +1,4 @@
 class Product < ActiveRecord::Base
-  extend FriendlyId
-  friendly_id :name, use: [:slugged, :finders]
 
   is_impressionable
 
@@ -24,7 +22,4 @@ class Product < ActiveRecord::Base
   scope :scopedproduct, -> (params) { psearch(params[:search]).by_category(params[:id], params[:subid]).page(params[:page]).per(8) }
   scope :in_cart, -> (cart) { where(id: cart) }
 
-  def normalize_friendly_id(text)
-    text.to_slug.normalize(transliterations: :russian).to_s
-  end
 end
