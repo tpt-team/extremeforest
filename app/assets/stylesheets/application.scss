@@ -148,3 +148,16 @@
     font-size: 13px;
     margin-left: 20px;
   }
+
+  .photo_product{
+    padding: 10px;
+    width: 310px;
+    height: auto;
+  }
+
+  .photo_cart{
+    object-fit: cover;
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+  }
