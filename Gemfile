@@ -4,6 +4,7 @@ gem 'simple_form'
 gem 'faker'
 gem 'impressionist'
 gem 'paperclip', '~> 4.1'
+gem 'paperclip-dropbox'
 gem 'kaminari'
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'bootstrap-growl-rails'
@@ -27,6 +28,6 @@ end
 
 group :development do
   gem 'web-console', '~> 2.0'
-  gem "letter_opener"
+  gem 'letter_opener'
   gem 'spring'
 end
