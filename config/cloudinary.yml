@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: drgxgic11
+  api_key: '685186266244546'
+  api_secret: eysK4KrDs3dyugI_g3GD1G8FjZo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: drgxgic11
+  api_key: '685186266244546'
+  api_secret: eysK4KrDs3dyugI_g3GD1G8FjZo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: drgxgic11
+  api_key: '685186266244546'
+  api_secret: eysK4KrDs3dyugI_g3GD1G8FjZo
+  enhance_image_tag: true
+  static_image_support: false
