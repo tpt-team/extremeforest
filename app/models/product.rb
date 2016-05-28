@@ -1,5 +1,4 @@
 class Product < ActiveRecord::Base
-
   is_impressionable
 
   belongs_to :category
@@ -7,11 +6,7 @@ class Product < ActiveRecord::Base
 
   has_many :comments, dependent: :destroy
 
-  has_attached_file :photo,
-    default_url: 'default.png',
-    storage: :dropbox,
-    dropbox_credentials: Rails.root.join('config/dropbox.yml'),
-    dropbox_options: {path: proc { |style| "products/#{name}/#{style}/#{photo.original_filename}" }}
+  has_attached_file :photo, styles: { medium: "300x300>", thumb: "100x100#" }, default_url: "/images/:style/missing.png"
   validates_attachment_content_type :photo, content_type: /\Aimage\/.*\Z/
 
   scope :by_category, -> (id, subid) do
@@ -25,5 +20,4 @@ class Product < ActiveRecord::Base
   scope :psearch, -> (name) { where('name ILIKE :q OR description ILIKE :q', q: "%#{name}%") if name }
   scope :scopedproduct, -> (params) { psearch(params[:search]).by_category(params[:id], params[:subid]).page(params[:page]).per(8) }
   scope :in_cart, -> (cart) { where(id: cart) }
-
 end

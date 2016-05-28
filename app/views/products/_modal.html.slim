@@ -6,11 +6,11 @@
           | &times
         h3.modal-title = product.name
         p.text-muted
-          = "Продукт просмотрено #{product.impressionist_count} раз"
+          = "Просмотрено: #{product.impressionist_count}"
       .modal-body
         .row
           .col-sm-4
-            = image_tag(product.photo.url(download: true), class: 'photo_product')
+            = image_tag(product.photo.url, class: 'photo_product')
           .col-sm-5.col-sm-offset-3
             h4 Description:
             = product.description
