@@ -25,5 +25,4 @@ class ProductsController < ApplicationController
   def destroy
     product.destroy
   end
-
 end

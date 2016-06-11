@@ -1,0 +1,17 @@
+.category
+  ul.main-menu
+    li
+      a href = root_path
+        | Все продукты
+    - categories.each do |category|
+      - cache category do
+        li
+          a href= categories_path(category)
+            span = category.title
+          - unless category.subcategories.blank?
+            ul.sub-menu
+              - category.subcategories.each do |subcategory|
+                - cache subcategory do
+                li
+                  a href= subcategories_path(subcategory)
+                    span = subcategory.title

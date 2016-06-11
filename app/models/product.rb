@@ -12,7 +12,6 @@ class Product < ActiveRecord::Base
     elsif subid
       joins(:subcategory).where('subcategories.id = ?', subid)
     end
-    #joins(:subcategory).where('subcategories.id = ?', subid) if subid
   end
   scope :psearch, -> (name) { where('name ILIKE :q OR description ILIKE :q', q: "%#{name}%") if name }
   scope :scopedproduct, -> (params) { psearch(params[:search]).by_category(params[:id], params[:subid]).page(params[:page]).per(8) }

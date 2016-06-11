@@ -2,8 +2,9 @@
   .alert.alert-info
     h3 Извините, таких товаров нету
 - @products.each_slice(4) do |group|
-  .row
-    = render partial: 'product', collection: group
+  - cache group do
+    .row
+      = render partial: 'product', collection: group
 = paginate @products
 - if @products.count > 0
   = page_entries_info @products
