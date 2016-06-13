@@ -29,4 +29,5 @@
               br
               p.text-center Чтобы оставить отзыв - зарегистрируйтесь.
             br
-            #comments = render product.comments.order(:created_at).reverse_order
+            .comments
+              #comments = render product.comments.order(:created_at).reverse_order
