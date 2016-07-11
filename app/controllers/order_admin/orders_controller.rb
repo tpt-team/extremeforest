@@ -10,6 +10,6 @@ class OrderAdmin::OrdersController < OrderAdmin::AdminsController
   private
 
   def order_params
-    params[:order].permit!
+    params.require(:order).permit(:status)
   end
 end
