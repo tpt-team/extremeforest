@@ -1,7 +1,18 @@
 = simple_form_for [:order_admin, order], remote: true do |f|
-  = f.input :username, disabled: true
-  = f.input :email, disabled: true
-  = f.input :phone, disabled: true
-  = f.input :status, collection: ['Новый', 'Отправлен', 'В процессе'],
+  = f.input :status, collection: ['new', 'done', 'process'],
             prompt: 'Select status', selected: order.status
   = f.button :button, "Ок", class: 'btn-primary'
+
+table.table
+  thead
+    tr
+      th Имя
+      th Email
+      th Номер телефона
+      th Город
+  tbody
+    tr
+      th= order.username
+      th= order.email
+      th= order.phone
+      th= order.city
