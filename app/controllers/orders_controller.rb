@@ -26,6 +26,6 @@ class OrdersController < ApplicationController
   helper_method :order
 
   def order_params
-    params.require(:order).permit!
+    params.require(:order).permit(:phone, :city, :nova_poshta).merge(user: current_user)
   end
 end

@@ -1,7 +1,9 @@
 class Order < ActiveRecord::Base
-  has_many :products, class_name: 'OrderProduct', :dependent => :delete_all
-  validates :email, presence: true
+  belongs_to :user
+  has_many :products, class_name: 'OrderProduct', dependent: :delete_all
+
   validates :phone, presence: true
+
   accepts_nested_attributes_for :products
 
   before_save :cal_total

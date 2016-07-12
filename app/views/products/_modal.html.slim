@@ -19,8 +19,9 @@
                 h4 Cost:
               .col-sm-6
                 h5 = number_to_currency(product.price)
-            .modal-footer
-              = link_to ' Добавить в корзину', cart_order_path(id: product), remote: true, method: :patch, class: 'order-btn'
+            - if current_user
+              .modal-footer
+                = link_to ' Добавить в корзину', cart_order_path(id: product), remote: true, method: :patch, class: 'order-btn'
           .col-sm-12
             - if current_user
               #commentsform = render 'comments/form'
